@@ -11,7 +11,7 @@ const props = defineProps({
 <template>
     <div class="col-md-6 col-lg-4 my-4 row align-items-center">
         <div class="col-4">
-            <img class="img-fluid" src="/img/guitarra_01.jpg" alt="imagen guitarra">
+            <img class="img-fluid" :src="'/img/' + guitarra.imagen + '.jpg'" :alt="'imagen guitarra' + guitarra.nombre">
         </div>
         <div class="col-8">
             <h3 class="text-black fs-4 fw-bold text-uppercase">{{ guitarra.nombre }}</h3>
@@ -21,5 +21,14 @@ const props = defineProps({
         </div>
     </div><!-- FIN GUITARRA -->
 </template>
+
+<style lang="css" scoped>
+p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+</style>
 
 
