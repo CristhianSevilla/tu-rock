@@ -89,7 +89,7 @@ onMounted(() => {
     <h2 class="text-center">Nuestra Colección</h2>
 
     <div class="row mt-5">
-      <div class="col-md-6 col-lg-4 my-4 row align-items-center">
+      <div v-for="guitarra in guitarras" class="col-md-6 col-lg-4 my-4 row align-items-center">
         <div class="col-4">
           <img class="img-fluid" src="/img/guitarra_01.jpg" alt="imagen guitarra">
         </div>
