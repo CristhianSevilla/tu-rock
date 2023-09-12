@@ -4,6 +4,7 @@ import { db } from './data/guitarras';
 import Guitarra from './components/Guitarra.vue';
 
 const guitarras = ref([])
+const carrito = ref([])
 
 onMounted(() => {
   console.log('xfg');
@@ -11,7 +12,8 @@ onMounted(() => {
 })
 
 const agregarCarrito = (guitarra) => {
-    console.log(guitarra);
+  guitarra.cantidad = 1;
+    carrito.value.push(guitarra)
 }
 
 </script>
