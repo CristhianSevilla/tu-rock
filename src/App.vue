@@ -14,8 +14,17 @@ onMounted(() => {
 });
 
 const agregarCarrito = (guitarra) => {
-  guitarra.cantidad = 1;
-  carrito.value.push(guitarra);
+  // findIndex nos retorna la posición en la que se encuentra una coincidencia, si no encuentra nada retorna -1
+  const existeGuitarra = carrito.value.findIndex(
+    (producto) => producto.id === guitarra.id
+  );
+
+  if (existeGuitarra >= 0) {
+    carrito.value[existeGuitarra].cantidad++;
+  } else {
+    guitarra.cantidad = 1;
+    carrito.value.push(guitarra);
+  }
 };
 </script>
 
