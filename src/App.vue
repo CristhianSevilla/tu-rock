@@ -21,7 +21,7 @@ const agregarCarrito = (guitarra) => {
 
 <template>
   <div>
-    <Header />
+    <Header :carrito="carrito" />
     <main class="container-xl mt-5">
       <h2 class="text-center">Nuestra Colección</h2>
 
