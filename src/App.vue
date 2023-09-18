@@ -26,11 +26,31 @@ const agregarCarrito = (guitarra) => {
     carrito.value.push(guitarra);
   }
 };
+
+const restarProductos = (id) => {
+  const guitarra = carrito.value.findIndex((producto) => producto.id === id);
+  // Validar que no sea una cantidad menor a cero
+  if (carrito.value[guitarra].cantidad <= 1) return;
+  // Restar cantidad
+  carrito.value[guitarra].cantidad--;
+};
+
+const sumarProductos = (id) => {
+  const guitarra = carrito.value.findIndex((producto) => producto.id === id);
+  // Validar que no sea una cantidad mayor a cinco
+  if (carrito.value[guitarra].cantidad >= 5) return;
+  //sumar cantidad
+  carrito.value[guitarra].cantidad++;
+};
 </script>
 
 <template>
   <div>
-    <Header :carrito="carrito" />
+    <Header
+      :carrito="carrito"
+      @restar-productos="restarProductos"
+      @sumar-productos="sumarProductos"
+    />
     <main class="container-xl mt-5">
       <h2 class="text-center">Nuestra Colección</h2>
 
