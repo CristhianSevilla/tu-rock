@@ -4,9 +4,13 @@ const props = defineProps({
     type: Array,
     required: true,
   },
+  guitarraPrincipal: {
+    type: Object,
+    required: true,
+  },
 });
 
-defineEmits(["restar-productos", "sumar-productos"]);
+defineEmits(["restar-productos", "sumar-productos", "agregar-carrito"]);
 </script>
 
 <template>
@@ -93,16 +97,19 @@ defineEmits(["restar-productos", "sumar-productos"]);
 
       <div class="row mt-5">
         <div class="col-md-6 text-center text-md-start pt-5">
-          <h1 class="display-2 fw-bold">Modelo VAI</h1>
+          <h1 class="display-2 fw-bold">
+            Modelo {{ guitarraPrincipal.nombre }}
+          </h1>
           <p class="mt-5 fs-5 text-white">
-            La guitarra Vai está diseñada para proporcionar una experiencia de
-            juego superior con un sonido único y una estética impresionante que
-            refleja la pasión y energía que Vai muestra en cada actuación.
+            {{ guitarraPrincipal.descripcion }}
           </p>
-          <p class="text-primary fs-1 fw-black">$399</p>
+          <p class="text-primary fs-1 fw-black">
+            ${{ guitarraPrincipal.precio }}
+          </p>
           <button
             type="button"
             class="btn fs-4 bg-primary text-white py-2 px-5"
+            @click="$emit('agregar-carrito', guitarraPrincipal)"
           >
             Agregar al Carrito
           </button>

@@ -10,7 +10,7 @@
 .carrito {
   background-color: transparent;
   border: none;
-  max-width: 2rem;
+  max-width: 3rem;
   position: relative;
   z-index: 100;
 }
