@@ -805,20 +805,6 @@ button:not(:disabled),
 .header .header-guitarra {
   display: none;
 }
-@media (min-width: 768px) {
-  .header .header-guitarra {
-    display: block;
-    position: absolute;
-    right: -30%;
-    bottom: 0;
-    animation-duration: 1s;
-    animation-delay: 0s;
-    animation-timing-function: ease-in-out;
-    animation-name: animarImagen;
-    z-index: 10;
-    overflow: hidden;
-  }
-}
 @media (min-width: 992px) {
   .header .header-guitarra {
     display: block;
