@@ -43,6 +43,10 @@ const sumarProductos = (id) => {
   //sumar cantidad
   carrito.value[guitarra].cantidad++;
 };
+
+const eliminarProducto = (id) => {
+  carrito.value = carrito.value.filter((producto) => producto.id !== id);
+};
 </script>
 
 <template>
@@ -53,6 +57,7 @@ const sumarProductos = (id) => {
       @restar-productos="restarProductos"
       @sumar-productos="sumarProductos"
       @agregar-carrito="agregarCarrito"
+      @eliminar-producto="eliminarProducto"
     />
     <main class="container-xl mt-5">
       <h2 class="text-center">Nuestra Colección</h2>
