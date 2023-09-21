@@ -799,10 +799,23 @@ button:not(:disabled),
   background-position: 50%;
   background-size: cover;
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
 }
 .header .header-guitarra {
   display: none;
+}
+@media (min-width: 768px) {
+  .header .header-guitarra {
+    display: block;
+    position: absolute;
+    right: -30%;
+    bottom: 0;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-name: animarImagen;
+    z-index: 10;
+  }
 }
 @media (min-width: 992px) {
   .header .header-guitarra {
@@ -816,4 +829,9 @@ button:not(:disabled),
     animation-name: animarImagen;
     z-index: 10;
   }
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
 }

@@ -28,7 +28,7 @@ export const db = [
     nombre: "VAI",
     imagen: "guitarra_04",
     descripcion:
-      "La guitarra Vai está diseñada para proporcionar una experiencia de juego superior con un sonido único y una estética impresionante que refleja la pasión y energía que Vai muestra en cada actuación.",
+      "La guitarra Vai está diseñada para proporcionar una experiencia de juego superior con un sonido único y una estética impresionante.",
     precio: 299,
   },
   {
