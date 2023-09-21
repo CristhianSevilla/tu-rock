@@ -13,6 +13,7 @@
   max-width: 3rem;
   position: relative;
   z-index: 100;
+  margin: 0;
 }
 
 @media (min-width: 920px) {
@@ -815,6 +816,7 @@ button:not(:disabled),
     animation-timing-function: ease-in-out;
     animation-name: animarImagen;
     z-index: 10;
+    overflow: hidden;
   }
 }
 @media (min-width: 992px) {

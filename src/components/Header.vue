@@ -55,8 +55,8 @@ const totalPagar = computed(() => {
                 <table class="w-100 table">
                   <thead>
                     <tr>
-                      <th>Imagen</th>
-                      <th>Nombre</th>
+                      <th>Img</th>
+                      <th>Modelo</th>
                       <th>Precio</th>
                       <th>Cantidad</th>
                       <th></th>
